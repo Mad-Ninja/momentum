@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  color: #fff;
+  text-shadow: black 3px 3px 5px, black -1px -1px 0, black -1px 1px 0,
+    black 1px -1px 0;
+  transition: background-image 1s ease-in-out;
+}
+.weather {
+  height: 235px;
+  font-size: 1.5rem;
+}
+.time {
+  font-size: 8rem;
+}
+.clock{
+  display: flex;
+  justify-content: center;
+}
+.clock div{
+  width: 160px;
+  margin-left: 20px;
+  
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.quote {
+  margin-top: 0.7rem;
+  font-size: 1.5rem;
+  width: 700px;
+  height: 10%;
+}
+
+
+.btn {
+  margin-top: 30px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  filter: grayscale(0.8);
+}
+
+.btnPrev {
+  position: fixed;
+  left: 0px;
+  font-size: 50px;
+  transition: left 0.3s ease;
+  margin: 0 0 0 10px;
+}
+
+.btnNext {
+  position: fixed;
+  right: 0px;
+  font-size: 50px;
+  transition: right 0.3s ease;
+  margin: 0 10px 0 0;
+}
+
+.btnNext:active,
+.btnNext:focus {
+  right: -3px;
+}
+
+.btnPrev:active,
+.btnPrev:focus {
+  left: -3px;
+}
+
+.btn:hover,
+.btnPrev:hover,
+.btnNext:hover {
+  cursor: pointer;
+  filter: grayscale(0.2);
+}
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
+
+
+@media(max-width: 1450px){
+  .time {
+
+    font-size: 4rem;
+  }
+  .clock div{
+    width: 80px;
+    margin-left: 7px;
+  }
+}
+
+@media(max-width: 860px){
+  .quote{
+    font-size: 1rem;
+  }
+  .time {
+    
+    font-size: 2.5rem;
+  }
+  .clock div{
+    width: 50px;
+
+  }
+}
+
+@media (max-width: 700px) {
+  .weather {
+    height: 190px;
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .quote {
+    width: 300px;
+  }
+  .btnPrev {
+    position: fixed;
+    bottom: 100px;
+    left: 0px;
+    font-size: 50px;
+    transition: left 0.5s ease;
+    margin: 0 0 0 10px;
+  }
+  
+  .btnNext {
+    position: fixed;
+    bottom: 100px;
+    right: 0px;
+    font-size: 50px;
+    transition: right 0.5s ease;
+    margin: 0 10px 0 0;
+  }
+  .time {
+    margin:0 0 0.5rem 0;
+    font-size: 1.5rem;
+  }
+  .clock div{
+    width: 30px;
+    
+  }
+}
